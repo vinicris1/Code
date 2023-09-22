@@ -42,3 +42,5 @@ Out-Host - envia a saida para linha de comando
 Out-Null - apaga a saida em vez de enviar para o console
 Out-Printer - Envia a saida para a impressora
 Out-String - Envia a saida para uma serie de strings
+
+get-date | ConvertTo-Html > x.html
