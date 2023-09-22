@@ -1,0 +1,44 @@
+Com $PSVersionTable.PSVersion pega a versão atual do PowerShell
+
+Com (Get-Host).Version consigo pegar a versão atual também porém pode ser usada para pegar de outro Host
+
+Get-Command -CommandType cmdlet - Mostra todos os cmdlet 
+
+update-help > sempre bom utilizar em maquinas novas
+
+get-help [comando]
+
+get-help [comando] -online - abre a documentação no site da microsoft
+
+get-help [comand] -showwindow - abre uma janela com a documentação
+
+CMDLets:
+uma pequena unidade de funcionalidade relacionada a um conjunto de recursos
+get-command -CommandType cmdlet
+
+Funções:
+podem fazer o mesmo que cmdlets
+get-command -CommandType function
+
+Alias:
+Alias são como apelidos para os cmdlets e funções
+get-command -CommandType Alias | more
+ex: cls = clear-host | clear = clear-host
+
+| - passa a saida para o comando subsequente
+> - redireciona a saida para um arquivo especifico, se ja existe é substituido
+>> - redireciona a saida para um arquivo especifico, se ja existe é o novo arquivo é anexado ao conteudo atual
+2> - redireciona a saida de erro para um arquivo especificado, se já existe é substituido
+2>> - redireciona a saida de erro para um arquivo especificado, se já existe é anexado ao conteudo atual
+2>&1 - redireciona a saida de erro para a saida padrão
+
+Get-Process | Out-GridView
+
+Outs:
+Out-Default - envia a saida para o formatador padrão e o cmdlet de saida padrão
+Out-File - envia a saida para um arquivo
+Out-GridView - Display em grid 
+Out-Host - envia a saida para linha de comando
+Out-Null - apaga a saida em vez de enviar para o console
+Out-Printer - Envia a saida para a impressora
+Out-String - Envia a saida para uma serie de strings
