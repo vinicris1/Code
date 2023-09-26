@@ -44,3 +44,31 @@ Out-Printer - Envia a saida para a impressora
 Out-String - Envia a saida para uma serie de strings
 
 get-date | ConvertTo-Html > x.html
+
+Operadores para busca:
+-it - Menor que
+-le - Menor ou igual
+-gt - maior que
+-ge - maior ou igual
+-eq - igual
+-ne - não igual
+-like - usa wildcards para comparar padrões
+
+Exemplo:
+    Get-Service | Where-Object {$_.Status -eq "Running"} - pega os serviços em execução e retorna os que estão rodando
+    Get-Service | Where-Object {$_.DisplayName -like "*Segurança*"} - retorna serviços em execução com o nome Segurança
+
+
+Modulos:
+Get-Module -ListAvailable - lista modulos avaiable
+
+Get-Command -module SmbShare - lista os comandos de um modulo especifico
+
+Get-PSRepository - mostra os modulos instalados
+
+instal-module -name [NOME] = instala o modulo solicitado
+
+> https://www.powershellgallery.com/ - galeria de modulos para instalar
+
+
+notepad Newscript.ps1
