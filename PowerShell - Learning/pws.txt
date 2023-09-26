@@ -86,3 +86,26 @@ $[nome] = @("teste", "teste2")
 
 HashTable:
 $server = @{Server1 = "127.0.0.1";Server2 = "127.0.0.2";Server3 = "127.0.0.3"}
+
+get-string:
+Get-Content .\teste.txt | Select-String [nome], [nome] - dentro do arquivo teste.txt vai procurar os dois parametros do select-string
+
+Select-String -Pattern [informação] .\teste.txt - dentro do teste.txt vai procurar o pattern com base na informação
+
+Get-ChildItem .\*.txt | Select-String -Pattern [informação] - dentro de todos os arquivos txt vai procurar o pattern com base na informação
+
+Select-String -Path "teste.txt" -pattern [informação] -Context 1,1 - Dentro do arquivo teste.txt vai achar o pattern com base na informação e retornar 1 linha acima e 1 abaixo
+
+Select-String -Path "teste.txt" -pattern [informação] -NotMatch - o que não match com a informação
+
+Regex:
+
+https://regexr.com/3e48o
+https://regexlib.com/CheatSheet.aspx
+
+Get-Content .\teste.txt | Select-String -Pattern '\d.\d.\d-\d' - Se utilizado por exemplo numa lista de cpfs, vai retornar somente os que estão escritos da maneira correta
+
+Job e Scheduled Jobs:
+Com job consegue-se criar jobs que ficam rodando em plano de fundo da maquinas
+Com scheduled jobs pode-se criar jobs pré agendados para ocorrerem em determinadas situações
+
