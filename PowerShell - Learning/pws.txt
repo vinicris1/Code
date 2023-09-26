@@ -72,3 +72,17 @@ instal-module -name [NOME] = instala o modulo solicitado
 
 
 notepad Newscript.ps1
+
+Variaveis:
+$env:[variavel] = consegue utilizar variaveis do próprio sistema
+
+cmd > set > aparece a lista de variaveis
+
+declaração de variaveis $[nome]
+
+Array:
+$[nome] = @("teste", "teste2")
+
+
+HashTable:
+$server = @{Server1 = "127.0.0.1";Server2 = "127.0.0.2";Server3 = "127.0.0.3"}
