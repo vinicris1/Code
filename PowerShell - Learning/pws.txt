@@ -109,3 +109,25 @@ Job e Scheduled Jobs:
 Com job consegue-se criar jobs que ficam rodando em plano de fundo da maquinas
 Com scheduled jobs pode-se criar jobs pré agendados para ocorrerem em determinadas situações
 
+Testes Windows Server:
+Get-Command *PSSession
+
+Enter-PSSession -VMName Server-Learn
+
+Remove-PSSession -VMName Server-Learn
+
+New-Item -Path .\teste.txt
+"teste" >> .\teste.txt  
+
+Get-Content .\teste.txt   
+
+Add-Content -Path .\teste.txt -Value "Teste 2"  
+
+Get-Content .\teste.txt  
+
+ping www.google.com | Add-Content -Path .\teste.txt
+
+Invoke-Command -ComputerName WIN-AUP71KNM6F7 -ScriptBlock {Get-HotFix -id KB5010523} - Com esse comando remotamente conseguimos descobrir que existe este hotfix 
+
+(Get-ComputerInfo).CsName - Comando utilizado para descobrir o ComputerName
+
